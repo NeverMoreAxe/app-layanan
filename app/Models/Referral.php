@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Referral extends Model
 {
-    use HasFactory, SoftDeletes, HasStatusHistories;
+    use HasFactory, HasStatusHistories, SoftDeletes;
 
     protected $fillable = [
         'referral_number',

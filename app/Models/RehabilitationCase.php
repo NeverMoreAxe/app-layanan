@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class RehabilitationCase extends Model
 {
-    use HasFactory, SoftDeletes, HasStatusHistories, HasDispositions;
+    use HasDispositions, HasFactory, HasStatusHistories, SoftDeletes;
 
     protected $fillable = [
         'case_number',

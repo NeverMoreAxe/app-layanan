@@ -52,7 +52,7 @@ class NumberSequence extends Model
             $sequence->increment('last_number');
             $sequence->refresh();
 
-            return sprintf('%s-%s-%0' . $digits . 'd', $prefix, $period, $sequence->last_number);
+            return sprintf('%s-%s-%0'.$digits.'d', $prefix, $period, $sequence->last_number);
         });
     }
 }

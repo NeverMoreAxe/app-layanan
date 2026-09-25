@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class PbiReactivation extends Model
 {
-    use HasFactory, SoftDeletes, HasApprovals;
+    use HasApprovals, HasFactory, SoftDeletes;
 
     protected $fillable = [
         'service_request_id',
