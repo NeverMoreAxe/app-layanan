@@ -5,6 +5,106 @@
 @source '../../vendor/bezhansalleh/filament-language-switch/**';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    --font-sans: 'Public Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Primary — Deep Sapphire Blue */
+    --color-primary-50: #EEF2FF;
+    --color-primary-100: #D9E2FF;
+    --color-primary-200: #AFC6FF;
+    --color-primary-300: #7EA1F5;
+    --color-primary-400: #4D7DE0;
+    --color-primary-500: #1E4FA3;
+    --color-primary-600: #183F83;
+    --color-primary-700: #003883;
+    --color-primary-800: #001944;
+    --color-primary-900: #001030;
+    --color-primary-950: #000B1F;
+
+    /* Elevation shadows per DESIGN.md */
+    --shadow-card: 0 1px 3px 0 rgba(30, 79, 163, 0.04), 0 1px 2px -1px rgba(30, 79, 163, 0.02);
+    --shadow-card-hover: 0 4px 6px -1px rgba(30, 79, 163, 0.07), 0 2px 4px -2px rgba(30, 79, 163, 0.05);
+    --shadow-dock: 0 -4px 12px -2px rgba(15, 23, 42, 0.1);
+    --shadow-modal: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+}
+
+/* Alpine.js cloak */
+[x-cloak] {
+    display: none !important;
+}
+
+/* Portal base styles */
+.portal-body {
+    background-color: #F9F9FF;
+    color: #1E293B;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Status badge semantic colors */
+.badge-success {
+    background-color: #ECFDF5;
+    color: #065F46;
+    border: 1px solid #A7F3D0;
+}
+.badge-process {
+    background-color: #EFF6FF;
+    color: #1E40AF;
+    border: 1px solid #BFDBFE;
+}
+.badge-warning {
+    background-color: #FFFBEB;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+}
+.badge-danger {
+    background-color: #FEF2F2;
+    color: #991B1B;
+    border: 1px solid #FECACA;
+}
+.badge-neutral {
+    background-color: #F1F5F9;
+    color: #475569;
+    border: 1px solid #CBD5E1;
+}
+
+/* Form focus ring */
+.input-focus:focus {
+    outline: none;
+    border-color: #1E4FA3;
+    box-shadow: 0 0 0 2px rgba(30, 79, 163, 0.2);
+}
+
+/* Step indicator */
+.step-active {
+    background-color: #1E4FA3;
+    color: #fff;
+    animation: pulse-step 2s infinite;
+}
+.step-done {
+    background-color: #1E4FA3;
+    color: #fff;
+}
+.step-upcoming {
+    background-color: #E2E8F0;
+    color: #94A3B8;
+}
+
+@keyframes pulse-step {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(30, 79, 163, 0.3); }
+    50% { box-shadow: 0 0 0 6px rgba(30, 79, 163, 0); }
+}
+
+/* Card hover lift */
+.card-hover {
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card-hover:hover {
+    box-shadow: 0 4px 6px -1px rgba(30, 79, 163, 0.07), 0 2px 4px -2px rgba(30, 79, 163, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
 }
